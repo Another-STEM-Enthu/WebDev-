@@ -1,0 +1,1388 @@
+
+<html><head>
+<title>Binary and Text</title>
+
+
+
+<script>
+var q,w;
+function todecide(){
+
+
+var xy=document.getElementsByName('in1')[0].value;
+var yz=document.getElementsByName('print1')[0].value;
+var proceed=false;
+var compxyq=xy.localeCompare(q);
+var compyzw=yz.localeCompare(w);
+
+if(compxyq==0 && compyzw!=0 || compyzw!=0 && q===""){
+	document.getElementById("conv").innerHTML = "<font size=6.5>&lArr;&#9552;&rArr;</font>";
+	proceed=false;
+	totext();
+
+}
+
+else if(compxyq!=0 && compyzw==0 || compxyq!=0 && w===""){
+	document.getElementById("conv").innerHTML = "<font size=6.5>&lArr;&#9552;&rArr;</font>";
+	proceed=false;
+	tobin();
+}
+
+else{
+	proceed=true;
+}
+
+
+
+
+if(proceed==true){
+q=document.getElementsByName('in1')[0].value;
+w=document.getElementsByName('print1')[0].value;
+
+
+var dec=w.localeCompare("");
+var dec1=q.localeCompare("");
+	if(dec==0){
+	tobin();
+	document.getElementById("conv").innerHTML = "<font size=6.5>&#9552;</font>";
+
+
+}
+
+	if(dec1==0){
+	totext();
+	document.getElementById("conv").innerHTML = "<font size=6.5>&#9552;</font>";
+
+}
+}
+
+
+
+}
+
+
+
+
+
+
+var in11,in11comp,in11dec;
+
+
+
+function changetoright(){
+	in11=document.getElementsByName('in1')[0].value;
+	
+}
+
+var myVar = setInterval(changetoright1, 2000);
+
+function changetoright1(){
+	document.getElementById("in").style.background="rgba(139,195,74,1)";
+	in11comp=document.getElementsByName('in1')[0].value;
+	in11dec=in11comp.localeCompare(in11);
+	if(in11dec!=0){
+	document.getElementById("conv").innerHTML = "<font size=6.5>&#9552;&rArr;</font>";
+clearInterval(myVar);		
+}
+}
+	
+
+
+
+
+
+
+
+var myVar1 = setInterval(changetoleft1, 2000);
+
+
+function changetoleft(){
+	in11=document.getElementsByName('print1')[0].value;
+	
+}
+
+
+function changetoleft1(){
+	document.getElementById("print").style.background="rgba(139,195,74,1)";	
+	in11comp=document.getElementsByName('print1')[0].value;
+	in11dec=in11comp.localeCompare(in11);
+	if(in11dec!=0){
+	document.getElementById("conv").innerHTML = "<font size=6.5>&lArr;&#9552;</font>";
+clearInterval(myVar1);
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var intext1="",intext="",res="";
+var rem,rem1,rem2,c1;
+
+
+
+var cou;
+function tobin(){
+
+
+ 	intext1=document.getElementsByName('in1')[0].value;
+    
+for (var i = intext1.length - 1; i >= 0; i--) {
+        intext += intext1[i];
+    }
+	
+
+
+
+var len=intext.length;
+	for(cou=0; cou < len; cou++){
+             
+            c1=intext.charCodeAt(cou);
+		
+		
+		 while(c1>1){
+                 rem=c1 % 2;
+                 c1=c1 / 2;
+		 c1=Math.trunc(c1);
+                 if(rem==0){
+                 res="0"+res;}
+                 
+                 else if(rem==1){
+                 res="1"+res;}
+		
+                 }
+		 res="1"+res;
+		 
+          	
+	var len1=res.length;
+
+		 if(len1!=8){
+               var len2=res.length;
+                    rem1=len2%8;
+
+                    rem2=8-rem1;
+
+
+
+                    switch(rem2){
+                        case 1:
+                        res="0"+res;
+                        break;
+                        
+                        case 2:
+                        res="00"+res;
+                        break;
+                        
+                        case 3:
+                        res="000"+res;
+                        break;
+                        
+                        case 4:
+                        res="0000"+res;
+                        break;
+                        
+                        case 5:
+                        res="00000"+res;
+                        break;
+                        
+                        case 6:
+                        res="000000"+res;
+                        break;
+                        
+                        case 7:
+                        res="0000000"+res;
+                        break;
+                        
+                        
+                        
+                    } 
+             	    
+                
+}
+                
+                else if(len1==8)
+                res=res;
+
+
+
+document.getElementById("print").innerHTML = res;
+
+
+
+
+}
+	
+	intext1="";
+	intext="";
+	res="";
+	
+
+
+
+}
+
+
+
+
+var inbin,inbin1;
+
+function totext(){
+	
+
+	inbin1=document.getElementsByName('print1')[0].value;
+	
+	var go=false;
+	cou=inbin1.length;
+		
+	var i,i1;
+	for(i=0;i<cou;i++){
+        i1=inbin1.charCodeAt(i);
+        
+        if (i1!=49 && i1!=48 && i1!=32){
+        go=false;
+        break;
+        }
+        go=true;    
+    }
+
+if(go==false){
+document.getElementById("in").innerHTML = "Invalid input";
+}
+
+
+else {
+
+
+
+var j,bin1len=inbin1.length;
+
+var next=false;
+while(next==false){
+for(j=0;j<bin1len;j++){
+            var j1=inbin1.substring(j,(j+1));
+		
+	    var n = j1.localeCompare(" ");
+		
+            if(n==0){
+            var x="",y="";
+            x=inbin1.substring(0,j);
+            y=inbin1.substring((j+1),inbin1.length);
+            inbin1=x+y;}
+        
+        //this is for elimination of any spaces entered in the initial input
+    }
+
+bin1len=inbin1.length;
+
+
+for(j=0;j<bin1len;j++){
+var m=inbin1.charCodeAt(j);
+if(m==32){
+next=false;}
+else{
+next=true;}
+}
+}
+
+cou=inbin1.length;
+var new1=inbin1;
+
+var h=cou%8;
+
+if(h!=0)
+    {
+    var decision=cou%8,add=8-decision;
+    
+    var i;
+    for(i=0;i<add;i++){
+    new1="0"+new1;
+    }}
+
+document.getElementById("print").innerHTML = new1;
+
+
+var exp=1,sum=0,get1=0;
+
+var final1="",Break="";
+//now reverse new1 and store it in rev
+var rev="";
+
+for (var p = new1.length - 1; p >= 0; p--) {
+        rev += new1[p];
+    }
+
+cou=rev.length;
+var n11=rev;
+var a11=8;
+
+var b,b1=Math.trunc((cou/8));
+for(b=1;b<=b1;b++){
+	 if((n11.length)>=8)
+        Break=n11.substring(0,8);
+
+	var a1,Breaklen=Break.length;
+	var get;
+	
+
+for(a1=0;a1<Breaklen;a1++){
+            get=Break.charCodeAt(a1);
+            switch(get){
+                case 48:
+                get1=0;
+                break;
+                
+                case 49:
+                get1=1;
+                break;
+            }
+            
+            sum+=(get1*exp);
+            exp*=2;
+        }
+
+var f=String.fromCharCode(sum);
+ final1=f+final1;
+   
+	sum=0;
+        exp=1;
+var w=rev.length;
+        if(a11<=(w-8))
+        n11=rev.substring(a11,(rev.length));
+        a11+=8;
+
+
+}
+
+document.getElementById("in").innerHTML = final1;
+}	
+}
+
+
+function resett(){
+  document.getElementById('print').value = "";
+  document.getElementById('in').value = "";
+  document.getElementById("conv").innerHTML = "<font size=6.5>&lArr;&#9552;&rArr;</font>";
+  compxyq=0;
+  compyzw=0;
+  q="";
+  w="";
+
+
+}
+
+function shrink(){
+	document.getElementById("one").style.transition="0.1s ease";
+ 	document.getElementById("one").style.height="40px";
+	document.getElementById("one").style.width="100px";
+}
+function shrink1(){
+document.getElementById("one").style.transition="0.1s ease";
+document.getElementById("one").style.height="60px";
+document.getElementById("one").style.width="120px";
+document.getElementById("print").value+="1";
+}
+
+
+function shrinkk(){
+	document.getElementById("zero").style.transition="0.1s ease";
+ 	document.getElementById("zero").style.height="40px";
+	document.getElementById("zero").style.width="100px";
+}
+function shrinkk1(){
+	document.getElementById("zero").style.transition="0.1s ease";
+	document.getElementById("zero").style.height="60px";
+	document.getElementById("zero").style.width="120px";
+	document.getElementById("print").value+="0";
+}
+
+
+var capsgo=true;
+function capitalise(){
+
+
+	if(capsgo==true){
+	capsgo=false;
+	document.getElementById("caps").innerHTML="Caps &dArr;";
+	var alphabets=[
+"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"
+];
+
+var alphabetscap=[
+"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"
+];
+
+	for(var p=0;p<=25;p++){
+	document.getElementById(alphabets[p]).innerHTML = alphabetscap[p];
+		}}
+
+else{
+	capsgo=true;
+	document.getElementById("caps").innerHTML="Caps  &uArr;";
+	var alphabets=[
+"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"
+];
+
+var alphabetscap=[
+"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"
+];
+
+	for(var p=0;p<=25;p++){
+	document.getElementById(alphabets[p]).innerHTML = alphabets[p];
+		}
+
+}
+
+
+
+}
+
+
+
+
+
+function set(){
+var alphabets=[
+"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"
+];
+
+var alphabetscap=[
+"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"
+];
+
+
+for(var p=0;p<=25;p++){
+	document.getElementById(alphabets[p]).style.color = "#4CAF50";
+	document.getElementById(alphabets[p]).style.opacity="1";
+		}
+clearInterval(transit);
+
+
+
+
+
+
+
+}
+
+
+function unset(){
+		
+	var alphabets=[
+"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"
+];
+
+var alphabetscap=[
+"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"
+];
+
+
+for(var p=0;p<=25;p++){
+	document.getElementById(alphabets[p]).style.color = "black";
+	document.getElementById(alphabets[p]).style.opacity="0.5";
+		}
+
+
+}
+
+
+function add(f,F){
+if(capsgo==true){
+document.getElementById("in").value+=f;}
+else{
+	document.getElementById("in").value+=F;
+}
+
+}
+
+
+
+
+
+function backspalpha(){
+	var beforeback=document.getElementById("in").value;
+	var aftback=beforeback.substring(0,(beforeback.length-1));
+	document.getElementById("in").value=aftback;
+}
+
+
+function backspnum(){
+	var beforeback=document.getElementById("print").value;
+	var aftback=beforeback.substring(0,(beforeback.length-1));
+	document.getElementById("print").value=aftback;
+
+}
+
+var transit = setInterval(bktransit, 8000);
+
+function bktransit(){
+	
+	document.getElementById("lettersbk1").style.top="89%";
+	document.getElementById("lettersbk1").style.left="0.5%";
+	document.getElementById("numsbk1").style.right="14%";
+
+}
+
+function bktransit2(){
+	document.getElementById("lettersbk1").style.top="65%";
+	document.getElementById("lettersbk1").style.left="13%";
+	document.getElementById("numsbk1").style.right="0.35%";
+
+}
+
+
+
+
+
+</script>
+
+
+
+
+<style>
+
+#main{
+	position:absolute;
+	top:10%;
+	left:15%;
+	background-color:none;
+	padding: 4% 30%;
+	height:45%;
+	
+	border-radius:5%;
+	}
+
+
+
+
+
+
+
+#reset1{
+	position:absolute;
+	top:85%;
+	left:46%;
+	background-color: #4CAF50;
+	padding: 10px 17px;
+	border-radius: 15%;
+	cursor:hand;
+	opacity:0.75;
+	transition: 0.5s ease;
+	border:none;
+}
+
+
+#reset1:hover{
+	opacity:1.0;
+	padding: 13px 21px;
+	box-shadow: 5px 5px 13px 3px #009688;
+	}
+
+
+#conv{
+	position:absolute;
+	top:43%;
+	left:45.5%;
+	background-color: #4CAF50;
+	padding: 10px 15px;
+	border-radius: 15%;
+	cursor:hand;
+	opacity:1;
+	transition: 0.5s ease;
+	border:none;s
+}
+
+
+#conv:hover{
+	opacity:1.0;
+	cursor:hand;	
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+#print{
+	position:absolute;
+	top:25%;
+	right:1%;
+	transition: 1.5s ease;
+	border-radius: 4%;
+	background-color:rgba(139,195,74,0.85);
+	border:none;
+
+	
+}
+
+
+
+
+#in{
+	position:absolute;
+	top:25%;
+	left:1%;
+	transition: 1.5s ease;
+	border-radius: 4%;
+	background-color:rgba(139,195,74,0.5);
+	border:none;
+
+	
+}
+
+
+
+
+#head{
+    background-color:white;
+    padding: 10px 10px;
+    border-radius: 5%;
+    transition: 0.7s ease;
+
+
+}
+
+
+
+
+
+#one{
+	position:absolute;
+	top:70%;
+	right:21%;
+	text-align:center;
+	font-size:55px;
+	background-color:white;
+	height:60px;
+	width:120px;
+	border-radius: 5%;
+	transition: 0.5s ease;
+	cursor: hand;
+
+
+}
+
+#one:hover{
+	background-color:#4CAF50;
+}
+
+
+
+#zero{
+	position:absolute;
+	top:70%;
+	right:8%;
+	background-color:white;
+	text-align:center;
+	font-size:55px;
+	height:60px;
+	width:120px;
+	border-radius: 5%;
+	cursor: hand;
+        transition: 0.5s ease;
+
+}
+
+#zero:hover{
+	background-color:#4CAF50;
+}
+
+#a{
+position:absolute;
+	top:68%;
+	left:2%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#a:hover{
+	background-color:black;
+	
+}
+
+
+
+
+#b{
+position:absolute;
+	top:68%;
+	left:6.5%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#b:hover{
+	background-color:black;
+}
+
+#c{
+position:absolute;
+	top:68%;
+	left:11%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#c:hover{
+	background-color:black;
+}
+
+#d{
+position:absolute;
+	top:68%;
+	left:15.5%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#d:hover{
+	background-color:black;
+}
+
+#e{
+position:absolute;
+	top:68%;
+	left:20.0%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#e:hover{
+	background-color:black;
+}
+
+
+
+
+#f{
+position:absolute;
+	top:68%;
+	left:24.5%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#f:hover{
+	background-color:black;
+}
+
+
+#g{
+position:absolute;
+	top:68%;
+	left:29%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#g:hover{
+	background-color:black;
+}
+
+#h{
+position:absolute;
+	top:68%;
+	left:33.7%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#h:hover{
+	background-color:black;
+}
+
+#i{
+position:absolute;
+	top:82%;
+	left:2%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#i:hover{
+	background-color:black;
+}
+
+#j{
+position:absolute;
+	top:82%;
+	left:6.5%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#j:hover{
+	background-color:black;
+}
+
+
+
+
+
+
+#k{
+position:absolute;
+	top:82%;
+	left:11%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#k:hover{
+	background-color:black;
+}
+
+
+#l{
+position:absolute;
+	top:82%;
+	left:15.5%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#l:hover{
+	background-color:black;
+}
+
+#m{
+position:absolute;
+	top:82%;
+	left:20%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#m:hover{
+	background-color:black;
+}
+
+#n{
+position:absolute;
+	top:82%;
+	left:24.5%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#n:hover{
+	background-color:black;
+}
+
+#o{
+position:absolute;
+	top:82%;
+	left:29%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#o:hover{
+	background-color:black;
+}
+
+
+
+
+
+#p{
+position:absolute;
+	top:82%;
+	left:33.75%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#p:hover{
+	background-color:black;
+}
+
+
+#q{
+position:absolute;
+	top:96.5%;
+	left:2%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#q:hover{
+	background-color:black;
+}
+
+#r{
+position:absolute;
+	top:96.5%;
+	left:6.5%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#r:hover{
+	background-color:black;
+}
+
+#s{
+position:absolute;
+	top:96.5%;
+	left:11%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#s:hover{
+	background-color:black;
+}
+
+#t{
+position:absolute;
+	top:96.5%;
+	left:15.5%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#t:hover{
+	background-color:black;
+}
+
+
+
+
+
+#u{
+position:absolute;
+	top:96.5%;
+	left:20%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#u:hover{
+	background-color:black;
+}
+
+
+#v{
+position:absolute;
+	top:96.5%;
+	left:24.5%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#v:hover{
+	background-color:black;
+}
+
+#w{
+position:absolute;
+	top:96.5%;
+	left:29%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#w:hover{
+	background-color:black;
+}
+
+#x{
+position:absolute;
+	top:96.5%;
+	left:33.5%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#x:hover{
+	background-color:black;
+}
+
+#y{
+position:absolute;
+	top:111%;
+	left:2%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#y:hover{
+	background-color:black;
+}
+
+#z{
+	position:absolute;
+	top:111%;
+	left:7%;
+	background-color:white;
+	height:50px;
+	width:40px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.5s ease;
+}
+#z:hover{
+	background-color:black;	
+}
+
+
+#caps{
+	position:absolute;
+	top:111%;
+	left:12%;
+	background-color:white;
+	width:170px;
+	text-align: center;
+	padding-bottom:1px;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.3s ease;
+	color:#4CAF50;
+}
+
+#caps:hover{
+	background-color:#4CAF50;
+	color:white;
+}
+#alpha{
+	background-color:rgba(2,2,2,0.25);
+	position:absolute;
+	top:13%;
+	left:0%;
+	height:120%;
+	width:40%;
+	border-radius:9%;
+	
+	
+}
+
+#nums{
+	background-color:rgba(2,2,2,0.25);
+	position:absolute;
+	top:13%;
+	left:60%;
+	height:120%;
+	width:40%;
+	border-radius:9%;
+
+}
+
+#all{
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+
+}
+
+#letters{
+	font-size: 40px;
+}
+
+#cross1{
+	position:absolute;
+	top:111%;
+	left:30.5%;
+	background-color:white;
+	height:52.5px;
+	width:50px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.3s ease;
+	color:red;
+}
+
+#cross1:hover{
+	background-color:red;
+	color:white;
+}
+
+
+
+
+#cross2{
+	position:absolute;
+	top:70%;
+	right:2%;
+	background-color:white;
+	height:59px;
+	width:50px;
+	text-align: center;
+	border-radius: 5%;
+        cursor: hand;
+ 	transition: 0.3s ease;
+	color:red;
+}
+
+#cross2:hover{
+	background-color:red;
+	color:white;
+}
+
+
+#credits{
+	
+	bottom:0;
+	left:0;
+	position:absolute;
+}
+
+
+#lettersbk{
+	top:65%;
+	left:0.35%;
+	position:absolute;
+	background:url(i201.jpg);
+	height:62%;
+	width:39.3%;
+	border-radius:9%;
+}
+
+
+#lettersbk1{
+	top:65%;
+	left:13%;
+	position:absolute;
+	background:url(i201.jpg);
+	height:35%;
+	width:25%;
+	border-radius:9%;
+	transition: 8s ease;
+	opacity:1;
+}
+
+#numsbk{
+	top:65%;
+	right:0.35%;
+	position:absolute;
+	background:url(i201.jpg);
+	height:62%;
+	width:39.3%;
+	border-radius:9%;
+}
+
+
+#numsbk1{
+	top:65%;
+	right:0.35%;
+	position:absolute;
+	background:url(i201.jpg);
+	height:62%;
+	width:25%;
+	border-radius:9%;
+	transition: 8s ease;
+	opacity:1;
+}
+
+</style>
+
+
+
+
+
+</head>
+
+<body background="bk.jpg">
+<div id="all" onMouseover="unset();bktransit();setTimeout(bktransit2,8000);"></div>
+<div id="main">
+<div id="head"><center><font color="red" face="Constantia">TEXT AND BINARY</font></center></div><br>
+
+
+<button id="reset1" onClick="resett()"> RESET </button>
+
+<button id="conv" onClick="todecide()"><font size=6.5>&lArr;&#9552;&rArr;</font></button>
+
+
+
+<div id="numsbk"></div>
+<div id="numsbk1"></div>
+
+
+
+<div id="nums"><center><font color="#4CAF50" size=6.5><u><b>BINARY</b></u></font></center></div>
+<textarea rows="10" cols="50" id="print" name="print1" onClick="changetoleft();setTimeout(changetoleft1,1500);"></textarea>
+
+<div id="one" onClick="shrink();setTimeout(shrink1,150);">1</div>
+<div id="zero" onClick="shrinkk();setTimeout(shrinkk1,150);">0</div>
+
+<div id="lettersbk"></div>
+<div id="lettersbk1"></div>
+
+<div id="alpha" onMouseover="set();"><center><font color="#4CAF50" size=6.5><u><b>TEXT</b></u></font></center>
+</div>
+<textarea rows="10" cols="50"  id="in" name="in1" size=35 onClick="changetoright();setTimeout(changetoright1,1500);"></textarea>
+
+
+
+
+
+<div id="letters">
+<div id="a" onClick="add('a','A')">a</div>
+<div id="b" onClick="add('b','B')">b</div>
+<div id="c" onClick="add('c','C')">c</div>
+<div id="d" onClick="add('d','D')">d</div>
+<div id="e" onClick="add('e','E')">e</div>
+<div id="f" onClick="add('f','F')">f</div>
+<div id="g" onClick="add('g','G')">g</div>
+<div id="h" onClick="add('h','H')">h</div>
+<div id="i" onClick="add('i','I')">i</div>
+<div id="j" onClick="add('j','J')">j</div>
+<div id="k" onClick="add('k','K')">k</div>
+<div id="l" onClick="add('l','L')">l</div>
+<div id="m" onClick="add('m','M')">m</div>
+<div id="n" onClick="add('n','N')">n</div>
+<div id="o" onClick="add('o','O')">o</div>
+<div id="p" onClick="add('p','P')">p</div>
+<div id="q" onClick="add('q','Q')">q</div>
+<div id="r" onClick="add('r','R')">r</div>
+<div id="s" onClick="add('s','S')">s</div>
+<div id="t" onClick="add('t','T')">t</div>
+<div id="u" onClick="add('u','U')">u</div>
+<div id="v" onClick="add('v','V')">v</div>
+<div id="w" onClick="add('w','W')">w</div>
+<div id="x" onClick="add('x','X')">x</div>
+<div id="y" onClick="add('y','Y')">y</div>
+<div id="z" onClick="add('z','Z')">z</div>
+<div id="caps" onClick="capitalise();">Caps  &uArr;</div>
+</div>
+
+<font color="red" size=8>
+<div id="cross1" onClick="backspalpha()">←</div>
+<div id="cross2" onClick="backspnum()">←</div>
+</font>
+
+</div>
+
+
+<b>
+<font color="yellow" size=4>
+<div id="credits">Made by<br>-Varad Deshpande<br>Completed on 03.04.2018(9th std)</div>
+</font></b>
+</body>
+</html>
