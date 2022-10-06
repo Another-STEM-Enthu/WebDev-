@@ -1,0 +1,1751 @@
+﻿
+<html>
+<head><title>Quid Pro Quo</title>
+<style>
+#sitemap{
+	position: fixed;
+	bottom:0vh;
+	left:25vw;
+	background-color: rgba(0, 0, 0, 0.9);
+	border-radius: 8px;		
+	border-top: 1vh solid blue;
+	border-bottom: 1vh solid blue;
+	width: 51.5vw;
+	height: 12vh;	
+	transition: 0.7s ease-out;	
+	opacity: 0.4;
+}
+
+#sitemap:hover{
+	opacity:1;
+	transform: scale(1.1);
+	background-color: rgba(0, 0, 0,1);
+}
+
+#logo{
+	position: fixed;
+	top:0vh;
+	left:35vw;
+	background-color: rgba(0, 0, 0, 0.9);
+	border-radius: 8px;		
+	border-top: 1vh solid blue;
+	border-bottom: 1vh solid blue;
+	width: 30vw;
+	height: 15vh;	
+	transition: 0.5s ease-out;	
+	opacity: 0.4;
+}
+
+#logo:hover{
+	background-color: rgba(255, 255, 255,0.9);
+	opacity: 0.9;
+}
+
+#mainlogo1{
+	position: fixed;
+	top:2vh;
+	background-image: url("cartlogo.jpg");
+	left:40vw;
+	height: 13vh;
+	width:20vw;
+	opacity:1.0;
+	transition: 0.7s ease;
+}
+
+#logo:hover > #mainlogo1{
+	left:20vw;
+	opacity:0.0;
+}
+
+
+#mainlogo2{
+	position: fixed;
+	top:15vh;
+	background-image: url("cartlogo.jpg");
+	left:40vw;
+	height: 13vh;
+	width:20vw;
+	opacity:0;
+	transition: 0.7s ease;
+}
+
+#logo:hover > #mainlogo2{
+	top:2vh;
+	opacity:1.0;
+}
+
+
+
+#showmap{
+	position: absolute;
+	top:0vh;
+	left:29vw;
+	border-radius: 8px;		
+	border-bottom: 10px solid blue;
+	width: 5vw;
+	height:3vh;
+	background-color: lightgrey;
+	text-align: center;
+	padding: 2vh 2vh;
+	transition: 2s ease;			
+}
+
+
+
+
+
+#b1{
+	position: absolute;
+	top:3vh;
+	left:2vw;	
+	border-radius: 8px;		
+	width:8vw;
+	height:7vh;
+	font-size:2.5vh;
+	border-top: 5px solid blue;
+	border-bottom:none;
+	border-right:none;
+	border-left:none;
+	cursor: hand;
+}
+
+#b1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#b1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+#b1:hover span {
+  padding-right: 25px;
+}
+
+#b1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+
+
+
+
+#b2{
+	position: absolute;
+	top:3vh;
+	left:12vw;	
+	border-radius: 8px;		
+	width:8vw;
+	height:7vh;
+	font-size:2.5vh;
+	border-top: 5px solid blue;
+	border-bottom:none;
+	border-right:none;
+	border-left:none;
+	cursor: hand;
+}
+
+
+#b2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#b2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+#b2:hover span {
+  padding-right: 25px;
+}
+
+#b2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+
+
+#b3{
+	position: absolute;
+	top:3vh;
+	left:22vw;	
+	border-radius: 8px;		
+	width:8vw;
+	height:7vh;
+	font-size:2.5vh;
+	border-top: 5px solid blue;
+	border-bottom:none;
+	border-right:none;
+	border-left:none;
+	cursor: hand;
+}
+
+#b3 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#b3 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+#b3:hover span {
+  padding-right: 25px;
+}
+
+#b3:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+
+
+#b4{
+	position: absolute;
+	top:3vh;
+	left:32vw;	
+	border-radius: 8px;		
+	width:8vw;
+	height:7vh;
+	font-size:2.5vh;
+	border-top: 5px solid blue;
+	border-bottom:none;
+	border-right:none;
+	border-left:none;
+	cursor: hand;
+}
+
+
+
+#b4 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#b4 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+#b4:hover span {
+  padding-right: 25px;
+}
+
+#b4:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+
+
+#b5{
+	position: absolute;
+	top:3vh;
+	left:42vw;	
+	border-radius: 8px;		
+	width:8vw;
+	height:7vh;
+	font-size:2.5vh;
+	border-top: 5px solid blue;
+	border-bottom:none;
+	border-right:none;
+	border-left:none;
+	cursor: hand;
+}
+
+#b5 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#b5 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+#b5:hover span {
+  padding-right: 25px;
+}
+
+#b5:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+#apparels{
+	background-image: url("apparelbk.jpg");
+	width:98vw;
+	height:1000vh;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 2vw;
+}
+
+
+#electronics{
+	background-image: url("electronicsbk.jpg");
+	width:98vw;
+	height:930vh;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 2vw;
+}
+
+#offers{
+	background-image: url("offersbk.jpg");
+	width:98vw;
+	height:570vh;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 2vw;
+}
+
+#contact{
+	background-image: url("i2.jpg");
+	width:98vw;
+	height:100vh;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 2vw;
+}
+
+
+
+
+#content1{
+	background-image: url("bk1.jpg");
+	width:98vw;
+	height:50vh;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+
+
+
+
+
+
+
+
+
+.slider-holder
+        {
+            width:57vw;
+            height: 57vh;
+            background-color: yellow;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0vh;
+            text-align: center;
+            overflow: hidden;
+	    border-radius:1vw;
+	transition:1.5s ease;
+	opacity:1;
+	
+        }
+        
+
+
+
+
+        .image-holder
+        {
+            width: 300vw;
+            background-color: red;
+            height: 40vh;
+            clear: both;
+            position: relative;
+            
+            -webkit-transition: left 1.5s;
+            -moz-transition: left 1.5s;
+            -o-transition: left 1.5s;
+            transition: left 1.5s;
+        }
+        
+        .slider-image
+        {
+            float: left;
+            margin: 0vw;
+            padding: 0vw;
+            position: relative;
+        }
+        
+        #slider-image-1:target ~ .image-holder
+        {
+            left: 0vw;
+        }
+        
+        #slider-image-2:target ~ .image-holder
+        {
+            left: -59vw;
+        }
+        
+        #slider-image-3:target ~ .image-holder
+        {
+            left: -118vw;
+        }
+
+	#slider-image-4:target ~ .image-holder
+        {
+            left: -177vw;
+        }
+        
+
+        .button-holder
+        {
+            position: relative;
+            top: -3vh;
+        }
+        
+        .slider-change
+        {
+            display: inline-block;
+            height: 2.3vh;
+            width: 2.3vh;
+            border-radius: 2.3vh;
+            background-color: #35e8ff;
+        }
+
+#cont{
+	width:98vw;
+	height:57vh;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	background-image: url(bk1.jpg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#apDiv2 {
+	position: fixed;
+	width: 150px;
+	height: 0px;
+	z-index: 2;
+	right: 8vw;
+	top: -660px;
+	opacity:1.0;
+        transition:2.0s ease;
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+#namee{
+	background:rgba(255,255,255,0.3);
+	height:100;
+	width:200;
+	border-radius:9%;
+	top:1000;
+	
+}
+
+#us{ 
+     width: 150px;
+    padding: 12px 10px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid red;
+    transition:1.2s ease;
+
+	
+
+}
+
+#pa{
+    width: 150px;
+    padding: 12px 10px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid red;
+    transition:1.2s ease;
+  
+}
+
+#log{
+    background-color: #35e8ff;
+    border: none;
+    color: white;
+    padding: 10px 45px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius:9%;
+}
+
+
+
+
+#sign{
+    background-color: #35e8ff;
+    color: white;
+    border:none;
+    padding: 12px 24px;
+    text-decoration: none;
+    cursor: hand;
+    border-radius:9%;
+    transition:2.0s ease;
+    position: fixed;
+    top: 30px;
+    left: 20px;
+
+}
+
+#out{
+    background-color: #35e8ff;
+    color: white;
+    border:none;
+    padding: 12px 24px;
+    text-decoration: none;
+    cursor: hand;
+    border-radius:9%;
+    transition:2.0s ease;
+    position: fixed;
+    top: 30px;
+    left: -100px;    
+}
+
+
+
+#us:hover{
+	background-color:rgba(96, 125, 139,0.2)}
+#pa:hover{
+	background-color:rgba(96, 125, 139,0.2)}
+
+
+
+#INOUT{
+	position: fixed;
+	top:13px;
+	left:13px;
+	background-color: rgba(0, 0, 0, 0.9);
+	border-radius: 8px;		
+	border-top: 1vh solid blue;
+	border-bottom: 1vh solid blue;
+	width: 105px;
+	height: 60px;	
+	transition: 0.5s ease-out;	
+	opacity: 1.0;
+}
+
+#demo{
+	position: fixed;
+	top:-20vh;
+	right:2vw;
+	background-color: rgba(0, 0, 0, 0.9);
+	border-radius: 8px;		
+	border-top: 1vh solid blue;
+	border-bottom: 1vh solid blue;
+	width: 15vw;
+	height: 10vh;	
+	transition: 0.5s ease-out;	
+	opacity: 1.0;
+}
+
+#demo:hover{
+	transform:scale(1.1);
+}
+
+#cart{
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 1vh 6vw;
+    text-decoration: none;
+    cursor: hand;
+    transition: 2.0s ease;
+    box-shadow:1px 1px 16px 5px #c55151;
+    position:fixed;
+    top:13vh;
+    right:2.6vh;
+}
+
+#hi{
+	position: absolute;
+	top:60vh;
+	left:6vw;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 8px;		
+	border-left: 0.3vh solid red;
+	border-right: 0.3vh solid red;
+	width: 19vw;
+	height: 19vw;	
+	transition: 0.7s ease;	
+	opacity: 1.0;	
+}
+
+#hi:hover{
+	transform: scale(1.1);
+}
+
+
+#elecintro{
+	margin:auto;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 8px;		
+	border-left: 0.4vh solid red;
+	border-right: 0.4vh solid red;
+	width: 65vw;
+	height: 19vw;	
+	transition: 0.7s ease;	
+	opacity: 1.0;	
+	box-shadow:1px 1px 16px 5px red;
+}
+
+#elecintro:hover{
+	transform: scale(1.1);
+}
+
+
+#intro{
+	position: absolute;
+	top:60vh;
+	left:26vw;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 8px;		
+	border-left: 0.3vh solid red;
+	border-right: 0.3vh solid red;
+	width: 60vw;
+	height: 19vw;	
+	transition: 0.7s ease;	
+	opacity: 1.0;
+}
+
+#intro:hover{
+	transform: scale(1.05);
+}
+
+
+#filter{
+	position: fixed;
+	top:40vh;
+	left:-23.9vw;
+	background: url(bkfind2.gif);
+	border-radius: 1vh;		
+	border: 0.7vh solid #35e8ff;
+	width: 25vw;
+	height: 25vw;	
+	transition: 1s ease;	
+	opacity: 1.0;
+}
+
+#filter:hover{
+	left:0vw;
+}
+
+
+
+
+
+#sidef{
+	position:absolute;
+	right:-24vh;
+	top:20vh;
+	background-color: #35e8ff;		
+	width: 25.5vw;
+	height: 2vw;	
+	transition: 1s ease;	
+	opacity: 1.0;
+	font-size: 2.8vh;
+	border-radius: 0.6vh;
+	transform: rotateZ(270deg);
+}
+
+#search{
+    width: 14vw;
+    padding: 1.65vh 7vh;
+    box-sizing: border-box;
+    border: 0.25vh solid red;
+    transition:1.2s ease;
+    border-radius: 1vh;
+}
+
+#address{
+    width: 40vw;
+    padding: 1.65vh 3vh;
+    box-sizing: border-box;
+    border: 0.25vh solid red;
+    transition:1.2s ease;
+    border-radius: 1vh;
+}
+
+#redeemcode{
+    width: 40vw;
+    padding: 1.65vh 3vh;
+    box-sizing: border-box;
+    border: 0.25vh solid red;
+    transition:1.2s ease;
+    border-radius: 1vh;
+}
+
+
+
+#go{
+    background: url(searchb.png);
+    color: white;
+    border: none;
+    text-decoration: none;
+    cursor: hand;
+    border-radius: 3.1vh;
+    transition: 2.0s ease;
+    position: fixed;
+    width:3vw;
+    height:3vw;
+    border: 0.25vh solid red;
+
+}
+
+#catg{
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 2.2vh 4vh;
+    text-decoration: none;
+    cursor: hand;
+    border-radius: 0.45vh;
+    transition: 1s ease;
+    border: 0.15vh solid red;
+
+}
+#catg:hover{
+ background-color: #35e8ff;	
+}
+
+
+
+
+
+
+
+#card {
+  box-shadow:1px 1px 16px 5px red;
+  background:white;
+  border-radius:2%;
+  transition:0.5s ease;
+  width: 65vw;
+  length: 30vh;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+#price {
+  color: green;
+  font-size: 5vh;
+}
+
+{
+ color: red;
+}
+
+#card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+#card button:hover {
+  opacity: 0.7;
+}
+
+body
+{
+	font-size:      20%.; 
+	padding:         0;
+	background-color:white;
+	font-family:  arial
+}
+
+#magi{
+	transition: transform .2s;
+	width:50%;
+}
+
+#card:hover {
+	transform: scale(1.05);
+}
+
+
+
+
+#cartdisp{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background:white;
+  border-radius:2%;
+  transition:1s ease;
+  width: 31vh;
+  height: 20vw;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  visibility:hidden;
+  position:fixed;
+  right:2.6vh;
+  top:19vh;
+  box-shadow:1px 1px 16px 5px #c55151;
+}
+
+
+
+s{
+	color:red;
+}
+
+
+#totalprice{
+	color:#c55151; 
+	size:3vh; 
+	background:#35e8ff; 
+	padding:1.3vh 5vh;
+	border-radius:1vh;
+}
+
+#noitems{
+	color:#c55151; 
+	size:3vh; 
+	background:#35e8ff; 
+	padding:1.3vh 5vh;
+	border-radius:1vh;
+}
+
+
+
+#checko{
+	color:white; 
+	size:3vh; 
+	cursor:hand;
+	background:red; 
+	padding:1.3vh 5vh;
+	border-radius:1vh;
+}
+
+
+#ReachUs{
+	background-image: url("contactbk.jpg");
+	width:98vw;
+	height:200vh;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 2vw;
+}
+
+
+
+
+
+
+
+#payall{
+    background-image: url(paybk.jpg);
+    width: 98vw;
+    height: 200vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2vw;
+}
+
+
+
+
+
+
+
+
+</style>
+
+
+
+<script>
+var pass=false;
+var usern=["1234567890","1234567890","1234567890","1234567890","1234567890"];
+var passw=["1234567890","1234567890","1234567890","1234567890","1234567890"];
+var passw11="";
+var ph="";
+var logged=false;
+var addinfo=0;
+var usern1="";
+var passw1="";
+
+function called1(){
+	
+	 usern1=document.getElementsByName('User1')[0].value;
+	 passw1=document.getElementsByName('Pass1')[0].value;
+	 passw11=document.getElementsByName('Pass11')[0].value;
+	 ph=document.getElementsByName('PH')[0].value;
+	var n11=passw1.localeCompare(passw11);
+	
+	if(n11==0)
+{
+	usern[addinfo]=usern1;
+	passw[addinfo]=passw1;
+	
+	alert("Account created successfully!\nUsername:"+usern[addinfo]+"\nPassword:"+passw[addinfo]);
+	addinfo=addinfo+1;
+	
+}
+
+else {
+	alert("Passwords do not match");
+}
+
+document.getElementsByName('User1')[0].value="";
+document.getElementsByName('Pass1')[0].value="";
+document.getElementsByName('Pass11')[0].value="";
+document.getElementsByName('PH')[0].value="";
+
+}
+
+function called(){
+	 var user=document.getElementsByName('User')[0].value;
+	var pass=document.getElementsByName('Pass')[0].value;
+
+
+
+
+
+var u=0;
+for(u=0;u<5;u++){
+var n1=usern[u].localeCompare(user);
+if(n1==0)
+break;
+}
+
+var n0=passw[u].localeCompare(pass);
+
+if(n0==0 && n1==0){
+alert("Logged in  "+usern[u])
+	document.getElementById("apDiv2").style.top="-660";
+	document.getElementById("sign").style.left="-100";
+	document.getElementById("out").style.left="20";
+        document.getElementById("demo").style.top="2";
+	document.getElementById("cart").style.top="13vh";
+	
+	document.getElementById("cartdisp").style.top="140";
+	document.getElementById("demo").innerHTML = "<span style='color:#35e8ff;font-size:2.5vh;'>Welcome,"+usern[u]+"<br>Phone number:"+ph+"</span>";
+ 	
+document.getElementsByName('User')[0].value="";
+document.getElementsByName('Pass')[0].value="";
+logged=true;
+u=0;
+
+}
+
+else 
+{
+alert("Wrong Password or Wrong Username.");
+}
+
+}
+
+function gof(){
+	document.getElementById("out").style.left="-100";
+	document.getElementById("sign").style.left="20";
+	document.getElementById("demo").innerHTML = " ";
+        document.getElementById("demo").style.top="-200";
+
+	logged=false;
+}
+
+
+function show(){
+	document.getElementById("apDiv2").style.opacity="1.0";
+	document.getElementById("apDiv2").style.top="10";
+}
+function gob(){
+	document.getElementById("apDiv2").style.opacity="0";
+	document.getElementById("apDiv2").style.top="-660";
+}
+
+
+
+function showcart(){
+	document.getElementById("cartdisp").style.visibility="visible";
+}
+
+function hidecart(){
+	document.getElementById("cartdisp").style.visibility="hidden";
+}
+
+
+var totprice=0;
+var count=0;
+var cartdisplen="440";
+function addcart(prodname,price){
+count=count+1;
+totprice+=price;
+	alert("Product: "+prodname+" added to Cart.");
+	document.getElementById("cart").innerHTML="Cart("+count+")";
+	
+	if(count==1){
+	document.getElementById("cartdisp").style.visibility="visible";
+	document.getElementById("cartdisp").style.height=cartdisplen;
+	document.getElementById("totalprice").innerHTML="Total= &#x20b9;"+totprice;
+	document.getElementById("noitems").innerHTML="No. of items= "+count;
+	document.getElementById("cartdisp").innerHTML+="<br><br><span style='color:#c55151; size:3vh; background:#35e8ff; padding:1.3vh 1vh; border-radius:1vh;'>"+prodname.substring(0,11)+".. :Rs."+price+"</span>";
+}
+	
+	else if(count>1){
+	document.getElementById("totalprice").innerHTML="Total= &#x20b9;"+totprice;
+	document.getElementById("noitems").innerHTML="No. of items= "+count;
+	document.getElementById("cartdisp").innerHTML+="<br><br><span style='color:#c55151; size:3vh; background:#35e8ff; padding:1.3vh 1vh; border-radius:1vh;'>"+prodname.substring(0,11)+".. :Rs."+price+"</span>";}
+}
+
+var price1=0;
+function pay(price11){
+	price1=price11;
+	if(logged==false)	
+	alert("Kindly Log In to Pay");
+	
+	else if(logged==true && count==0){
+	document.getElementById("finalprice").innerHTML="<span style='color:green; size:10vh'><h1>&#x20b9; "+price1+"</h1></span>";
+	document.getElementById("finalprice1").innerHTML="<span style='color:green; size:10vh'><h1>&#x20b9; "+price1+"</h1></span>";
+	location.href="#payall";
+}
+
+	else if(logged==true && count>0){
+	document.getElementById("finalprice").innerHTML="<span style='color:green; size:10vh'><h1>&#x20b9; "+totprice+"</h1></span>";
+	document.getElementById("finalprice1").innerHTML="<span style='color:green; size:10vh'><h1>&#x20b9; "+totprice+"</h1></span>";
+	location.href="#payall";
+}
+		
+
+	
+}
+
+
+
+function searchh(){
+	var prodfound=false;
+	var prods=["shirts","pendant","dress","speakers","smartphones","laptops","offers","electronics","apparels","jewels","apple","bose quiet","sony speakers","asus","lenovo","samsung","samsung galaxy A6+","samsung tabs","xiaomi mi 5","shoes","jeans","shirt","t shirt","dress","jacket","gold necklace","pendant","hotwheels"];
+	var names=document.getElementById("search").value;
+	
+	
+
+	for(var k=0;k<prods.length;k++)
+{
+	var n1=names.localeCompare(prods[k]);
+
+	if(n1==0){
+	var locprod="#"+prods[k];
+	prodfound=true;
+	location.href=locprod;
+	}
+
+}
+if(prodfound==false)
+	alert("Sorry. Product Not Found.");
+
+
+}
+
+
+
+
+
+function cod(){
+	var addr=document.getElementById("address").value;
+	alert("Thank You for Shopping with us.\nYour product will be delivered in 4-5 working days.\nAt the following address:\n"+addr);
+	location.href="#offers";
+	document.getElementById("finalprice").innerHTML="<span style='color:green; size:10vh'><h1>&#x20b9; 0</h1></span>";
+	document.getElementById("finalprice1").innerHTML="<span style='color:green; size:10vh'><h1>&#x20b9; 0</h1></span>";
+	document.getElementById("address").value="";
+	gof();	
+	
+}
+
+
+var redeemgo=true;
+function redeem(){
+	var code="H5437";
+	var code1=document.getElementById("redeemcode").value;
+	var n1=code.localeCompare(code1);
+	if(n1==0 && redeemgo==true){
+	if(count==0){		
+	temp=Math.trunc(0.2*price1);
+	price1=price1-temp;
+	alert("Congratutions!\nYou have received a discount of 20%");
+	redeemgo=false;
+	document.getElementById("redeemcode").value="";
+	pay(price1);}
+
+	else if(count>1){
+	temp=Math.trunc(0.2*totprice);
+	totprice=totprice-temp;
+	alert("Congratutions!\nYou have received a discount of 20%");
+	redeemgo=false;
+	document.getElementById("redeemcode").value="";
+	pay(totprice);}
+}
+	else{alert("Invalid Coupon Code.");}
+}
+
+
+</script>
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+<div id="cont" onMouseOver="hidecart()">
+<div class="slider-holder">
+        <span id="slider-image-1"></span>
+        <span id="slider-image-2"></span>
+        <span id="slider-image-3"></span>
+	<span id="slider-image-4"></span>	
+        <div class="image-holder">
+            <embed src="HP1.mp4" height="400vw" width="800vh" class="slider-image" />
+            <img src="asuslaptopslide.jpeg" class="slider-image" />
+            <img src="appleairpodsslide.jpg" class="slider-image" />
+            <img src="apparelbkslide.jpg" class="slider-image" />
+        </div>
+        <div class="button-holder">
+            <a href="#slider-image-1" class="slider-change"></a>
+            <a href="#slider-image-2" class="slider-change"></a>
+            <a href="#slider-image-3" class="slider-change"></a>
+	    <a href="#slider-image-4" class="slider-change"></a>
+        </div>
+    </div>
+
+
+
+<div id="content1">
+
+<div id="hi"><center><br><br><br>
+<font size="7vh" color="red"><b>Hi</b></font>
+<br>
+<font size="4vh" color="red"><b>Welcome to<br><font color="white" size="5vh">Quid Pro Quo.</font><br><br>#New Concept</b></font>
+</center>
+</div>
+
+
+
+<div id="intro"><center>
+
+<font size="7vh" color="white"><b>#1</b></font><br>
+<font size="5vh" color="white"><b>Shopping Website in Maharashtra</b></font>
+
+
+<br><br><br><br><br>
+<font size="4.5vh" color="red"><b>
+We are a recent hot-startup based out of Pune. Founded in 2017 by Varad Deshpande, Subhrojyoti Mukherjee and Vibha Shah, we are now Maharashtra's #1 online shopping destination.<br> Our Website is an online mall. We plan on making your visit not a mere visit but an EXPERIENCE.
+</font></b>
+</div>
+
+</div>
+
+
+
+
+<div id="logo">
+<div id="mainlogo1">
+</div>
+<div id="mainlogo2">
+</div>
+</div>
+
+
+
+
+
+<br><br><br><br><br><br><br><br>
+<div id="offers">
+
+
+<br><br><br><br>
+<div id="elecintro"><center><br><br><br>
+<font size="7vh" color="red"><b>Offers.</b></font>
+<br><br>
+<font size="5vh" color="red"><b>We currently have special offers for the GANPATI FESTIVAL.</b></font><br><br>
+<font size="4vh" color="red">We offer AWESOME! deals on latest products.<br>At HUGE Discounts.</font>
+</center>
+</div>
+
+
+
+
+
+<br><br><br><br><br><br><br>
+<div id="card" name = "power">
+  <img src="xs3.jpg" class="magi" style="width:60%">
+  <h1>iPhone XS</h1>
+  <p id="price"><s>	&#x20b9; 99,900</s>  	&#x20b9; 80,000</p>
+  <p><h3> You save 	&#x20b9;19,900 . OFFER OF A LIFETIME. DO NOT MISS!!</h3></p>
+ <p><button><div id="card button" onClick="pay(80000)">Buy</div></button></p> 
+ <p><button><div id="card button" onClick="addcart('iPhone XS',80000)">Add to Cart(	&#x20b9; 80000)</div></button></p>
+
+
+
+  
+<div id="card" name="Fastrack" style="width:80%">
+  <img src="buy 1 get 1.jpg" class="magi">
+  <h1>Fastrack Women's Special Offer.</h1>
+  <p id="price">Buy 1 Get 2 Free</p>
+  <p><i><h3>CHANCE OF  LIFETIME DON'T WASTE IT!!</h3></i></p>
+   <p><button><div id="card button" onClick="pay(1100)">Buy(&#x20b9;1,100)</div></button></p> 
+  <p><button><div id="card button" onClick="addcart('Fastrack Watch Offer',1100)">Add to Cart(	&#x20b9; 1,100)</div></button></p>
+</div>
+
+<div id="card" name="hp">
+  <img src="hp spectre.jpg" class="magi" width="30% height="40%">
+  <h1>The All New Hp Spectre</h1>
+  <p id="price"><s>	&#x20b9;35,500</s>	&#x20b9;15,500</p>
+  <p><i><h3>	&#x20b9; 20,000 OFF ON  THE WORLD'S  THINNEST LAPTOP , HURRY!!!</font></i></p>
+   <p><button><div id="card button" onClick="pay(15000)">Buy(	&#x20b9;15,000)</div></button></p> 
+  <p><button><div id="card button" onClick="addcart('HP Spectre',15000)">Add to Cart(	&#x20b9; 15,000)</div></button></p>
+</div>
+
+
+
+<br>
+  
+<div id="card" name="bare">
+  <img src="bare.jpg" class="magi" >
+  <h1>SPECIAL OFFER ON DENIM JEANS</h1>
+  <p id="price">	&#x20b9; 3500</p>
+  <p><i><h2>Buy  1  Get   2  Free Pay   	&#x20b9;3500  Only </h2></p>
+   <p><button><div id="card button" onClick="pay(3500)">Buy</div></button></p> 
+  <p><button><div id="card button" onClick="addcart('Denims Special',3500)">Add to Cart</div></button></p></i>
+</div>
+
+
+
+<br>
+
+
+
+
+<br><br>
+<div id="card" name="hotwheels" style="width:80%">
+  <img src="hotwheels.jpg" class="magi">
+  <h1>LET'S  GO  RACING !!!</h1>
+  <p id="price">	&#x20b9; 3500</p>
+  <p><i><h2>Buy  1  Get   1Free Pay on Hot Wheels car set   	&#x20b9;1500  Only </h2></p>
+   <p><button><div id="card button" onClick="pay(3500)">Buy</div></button></p> 
+  <p><button><div id="card button" onClick="addcart('Hotwheels Set',3500)">Add to Cart</div></button></p>
+</div></i>
+
+<br><br><br>
+</font>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br>
+<div id="electronics">
+<br><br><br><br>
+<div id="elecintro"><center><br><br><br>
+<font size="7vh" color="red"><b>Electronics.</b></font>
+<br><br>
+<font size="5vh" color="red"><b>Only the best.</b></font><br><br>
+<font size="4vh" color="red">Shop from the top brands around the world.<br>At Indian Prices.</font>
+</center>
+</div>
+
+
+
+
+
+<a id="speakers"></a>
+<br><br><br><br><br><br><br>
+<a id="apple"><div id="card" name = "apple"></a>
+  <img src="appleairpods.jpeg" class="magi"  width="80%">
+  <h1>Apple Airpods</h1>
+  <p id="price"><s>	&#x20b9; 15,000</s>  	&#x20b9; 13,900</p>
+  <p><font color = "black" size = "3" face="Times New Roman">Apple AirPods Bluetooth Headset. Canalphone  design compatible  with mobile with powerful  wireless connectivity for music playback . Powerful wireless connectivity for music playback . Siri activated volume control.</font></p>
+ <p><button><div id="card button" onClick="pay(13900)">Buy</div></button></p> 
+ <p><button><div id="card button" onClick="addcart('Apple Airpods',13900)">Add to Cart(	&#x20b9; 13,900)</div></button></p>  </div>
+
+
+
+
+<br><br><br>
+<a id="bose quiet>"><div id="card" name="bose quiet"></a>
+  <img src="bose-quietcomfort.jpeg" class="magi" width="50%">
+  <h1>Bose Comfort</h1>
+  <p id="price"><s>	&#x20b9; 20,000</s> 	&#x20b9; 12,600</p>
+  <p><font color = "black" size = "3" face="Times New Roman">Bose Quiet Comfort 35 II Wireless Headphone  (Black)  World-class noise cancellation makes quiet sound quieter and music sound better . Bluetooth and NFC pairing with voice prompts make for hassle-free wireless connections . Now Alexa-enabled. Ask Alexa to play music, hear the news, check weather, control your smart home.</font></p>
+   <p><button><div id="card button" onClick="pay(12600)">Buy</div></button></p> 
+  <p><button><div id="card button" onClick="addcart('Bose Comfort',12600)">Add to Cart(	&#x20b9; 12,600)</div></button></p>
+</div>
+
+
+<br><br><br>
+<a id="sony speakers"><div id="card" name=" sony speakers" width="60%"></a>
+<img src="sony speakers.jpeg" style ="width:30%" class="magi">
+  <br><br><br>  
+    <h1>Sony Speakers</h1>
+  <p id="price"><s>	&#x20b9; 4990.00</s>  	&#x20b9; 3098.00</p>
+  <p><font color = "black" size = "3" face="Times New Roman">Sony S	&#x20b9;-XB10 Extra Bass  Portable  Splash-Proof  Wireless Speaker with Bluetooth and NFC  (Black) Bluetooth speake	&#x20b9; made for electronic dance music (EDM) . Extra bass for deep and punchy sound . Built-in mic for hands free calling.
+Compact, portable design for easy carrying .</font></p>
+   <p><button><div id="card button" onClick="pay(3098)">Buy</div></button></p> 
+  <p><button><div id="card button" onClick="addcart('Sony Speakers',3098)">Add to Cart(	&#x20b9; 3098.00)</div></button></p>
+</div>
+
+
+
+<a id="laptops"></a>
+<br><br><br>
+<a id="asus"><div id="card" name=" asus laptop"></a>
+<img src="asuslaptop.jpeg" style ="width:50%" class="magi">
+  <h1>Asus 6th Generation Laptop </h1>
+  <p id="price"><s>	&#x20b9; 27,500.00</s> 	&#x20b9; 26,817.00</p>
+  <p><font color = "black" size = "3" face="Times New Roman">Intel Core i3-6006U processor  . 4GB RAM. 15.6-inch screen, Intel HD 520 Graphics  . Windows 10 operating system</font></p>
+   <p><button><div id="card button" onClick="pay(26817)">Buy</div></button></p> 
+  <p><button><div id="card button" onClick="addcart('Asus 6th Gen. Laptop',26817)">Add to Cart(	&#x20b9; 26,817.00)</div></button></p>
+</div>
+ 
+
+<br><br><br>
+
+<a id="lenovo"><div id="card" name=" lenovo ideapad"></a>
+<img src="lenovo.jpeg" style ="width:50%" class="magi">
+  <h1>Lenovo Ideapad</h1>
+  <p id="price"><s>	&#x20b9; 42,490.00</s> 	&#x20b9;32,490.00</p>
+  <p><font color = "black" size = "3" face="Times New Roman">Lenovo Ideapad Platinum Grey Intel 8th Gen processor
+1TB hard drive
+15.6-inch Full HD screen, Antiglare display
+Free Windows 10 operating system
+Integrated GFX Graphics</font></p>
+   <p><button><div id="card button" onClick="pay(32490)">Buy</div></button></p> 
+  <p><button><div id="card button" onClick="addcart('Lenovo Ideapad',32490)">Add to Cart(	&#x20b9;32490.00)</div></button></p>
+</div>
+
+
+<br><br><br>
+<a id="smartphones"></a>
+<a id="samsung"><div id="card" name=" samsung galaxy A6+"></a>
+<img src="samsung galaxy J6.jpeg" style ="width:20%" class="magi">
+  <br><br><br>
+   <h1>Smasung Galaxy A6+</h1>
+  <p id="price"><s>	&#x20b9; 28,000.00</s> 	&#x20b9;21,900.00</p>
+  <p><font color = "black" size = "3"  face="Times New Roman">16MP+5MP primary dual camera and 24MP front facing camera
+ 1080 x 2220 pixels resolution
+Android Oreo operating system with 1.8GHz  4GB 64GB internal memory expandable up to 256GB and dual SIM (nano+nano) dual-standby (4G+4G)
+
+1 year manufacturer warranty for device and 6 months manufacturer warranty for in-box accessories including batteries from the date of purchase</font></p>
+   <p><button><div id="card button" onClick="pay(21900)">Buy</div></button></p> 
+  <p><button><div id="card button" onClick="addcart('Samsung Galaxy A6+',21900)">Add to Cart(	&#x20b9;21900.00)</div></button></p>
+</div>
+
+
+
+<div id="card" name=" samsung tabs">
+<img src="samsunglaps.jpeg" style ="width:20%" class="magi">
+  <br><br><br>
+   <h1>Samsung Galaxy Tab A</h1>
+  <p id="price"><s>	&#x20b9; 19,300.00</s> 	&#x20b9;17,900.00</p>
+  <p><font color = "black" size = "3" face="Times New Roman">8MP primary camera with auto focus, flash, 5x digital zoom, HD video recording, fixed focus, 3x digital zoom and 5MP front facing camera
+20.32 centimete	&#x20b9; (8-inch) capacitive touchscreen with 1280 x 800 pixels resolution
+Android Nougat operating system . 16GB internal memory expandable up to 256GB and single SIM
+1 year manufacturer warranty for device and 6 months manufacturer warranty for in-box accessories including batteries from the date of purchase</font></p>
+   <p><button><div id="card button" onClick="pay(17900)">Buy</div></button></p> 
+  <p><button><div id="card button" onClick="addcart('Samsung Galaxy Tab',17900)">Add to Cart(	&#x20b9;17,900.00)</div></button></p>
+</div>
+
+<br><br><br>
+<div id="card" name=" xiaomi mi 5">
+<img src="xiaomi mi 6.jpeg" style ="width:20%" class="magi">
+  <br><br><br>
+   <h1>Xiaomi Mi 5</h1>
+  <p id="price"><s> 24,99.00</s> 	&#x20b9;21,990.00</p>
+  <p><font color = "black" size = "3" face="Times New Roman">Snapdragon 820 Flagship processor . Fingerprint scanner 16 MP Camera. 4G Dual sim.</font></p>
+   <p><button><div id="card button" onClick="pay(21990)">Buy</div></button></p> 
+  <p><button><div id="card button" onClick="addcart('Xiaomi MI 6',21990)">Add to Cart($21,990)</div></button></p>
+</div>  
+  </div>
+<br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+<div id="apparels">
+<br><br><br><br><br><br><br>
+<div id="elecintro"><center><br><br><br>
+<font size="7vh" color="red"><b>Apparels and Clothing.</b></font>
+<br><br>
+<font size="5vh" color="red"><b>Only the best.</b></font><br><br>
+<font size="4vh" color="red">Shop from the top brands around the world.<br>At Indian Prices.<br>Also shop for Jewellery.</font>
+</center>
+</div>
+
+
+
+<br><br><br><br>
+<div id="card" name = "shoes">
+  <img src="shoes.png" class="magi">
+  <h1>Boxer-303</h1>
+  <p id="price"><font color="green">&#x20b9;105.55</font></p>
+  <p>Boxer-303,Men,Casual,Canvas.Stiched and strong.It is based on foot size 6inch</p>
+ <p><button><div id="card button" onClick="pay(105.55)">Buy</div></button></p> 
+ <p><button><div id="card button" onClick="addcart('Boxer-303',105.55)">Add to Cart(&#x20b9;105.55)</div></button></p>  </div>
+
+
+
+  
+<div id="card" name="jeans">
+  <img src="jeans.png" style ="width:30%" class="magi">
+  <h1>Urbano Jeans</h1>
+  <p id="price"><s>&#x20b9;170.65</s> <font color="green">&#x20b9;105.55</font></p>
+  <p>Urbano Fashion black slim fit stretch jeans offers comfort with style. Made with high-quality material of cotton lycra and superior stitching for excellent fit, comfort and a stylish look. Very affordable considering a compelling price for best quality. The jeans are durable and resistant against wear and tear making it last long. They can be paired with any Urbano Fashion shirt or t-shirt for the perfect casual or party wear look.</p>
+   <p><button><div id="card button" onClick="pay(105.55)">Buy</div></button></p> 
+  <p><button><div id="card button" onClick="addcart('Urbano Jeans',105.55)">Add to Cart(&#x20b9;105.55)</div></button></p>
+</div>
+
+
+<a id="shirts"></a>
+<div id="card" name=" shirt">
+<img src="shirt.png" style ="width:30%" class="magi">
+  <h1>Casual Shirt</h1>
+  <p id="price"><s>&#x20b9;230.99</s> <font color="green">&#x20b9;170.99</font></p>
+  <p>Look smart in casual/ formal/ partywear shirt from the house of Deeksha. The stylish look enhances the overall appeal of this shirt. This shirt ensures great comfort all day long. This full-sleeved shirt can be best teamed with a pair of trousers,jeans,chinos and lace-ups. Color and Sizes available.</p>
+   <p><button><div id="card button" onClick="pay(170.99)">Buy</div></button></p> 
+  <p><button><div id="card button" onClick="addcart('Shirt',170.99)">Add to Cart(&#x20b9;170.99)</div></button></p>
+</div>
+
+
+
+<div id="card" name=" t shirt">
+<img src="t shirt.png" style ="width:30%" class="magi">
+  <h1>Nike T-shirts</h1>
+  <p id="price"><s>&#x20b9;1000.59</s> <font color="green">&#x20b9;500</font></p>
+  <p>T-shirts are made of the most comfortable, highest quality fabric out there today. With these T-shirts, you not only feel the difference in comfort, but also feel the pride in bearing the logo of one of the world’s most famous Nike.</p>
+   <p><button><div id="card button" onClick="pay(500)">Buy</div></button></p> 
+  <p><button><div id="card button" onClick="addcart('Nike T-shirts',500)">Add to Cart(&#x20b9;500)</div></button></p>
+</div>
+
+
+<a id="dress"></a>
+<div id="card" name=" dress">
+<img src="dress.png" style ="width:30%" class="magi">
+  <h1>Western Dress</h1>
+  <p id="price"><s>&#x20b9;1300</s> <font color="green">&#x20b9;900</font></p>
+  <p>This beautifully handcrafted Western Dress by PURVAJA made for you with modern design, Look stunningly beautiful in this lovely dress, Fabric-Satin, Color : Black, Knee Length Sketer Dress, Stitch Type:- Stitched . Customer satisfaction Guaranteed!!.</p>
+   <p><button><div id="card button" onClick="pay(900)">Buy</div></button></p> 
+  <p><button><div id="card button" onClick="addcart('Western Dress',900)">Add to Cart(&#x20b9;900)</div></button></p>
+</div>
+
+
+
+<div id="card" name=" jacket">
+<img src="jacket.png" style ="width:30%" class="magi">
+  <h1> Women's Jacket </h1>
+  <p id="price"><s>&#x20b9;850</s> <font color="green">&#x20b9;700</font></p>
+  <p>Wearing this Women's Jacket Its keep you warm in the Cool Season. This Jacket is made of Cotton, its fabric spells pure comfort and warmth. Fetch a casual and cool look for yourself by teaming it with a pair of jeans and sneakers.</p>
+   <p><button><div id="card button" onClick="pay(700)">Buy</div></button></p> 
+  <p><button><div id="card button" onClick="addcart('Women's Jacket',700)">Add to Cart(&#x20b9;700)</div></button></p>
+</div><br>
+
+
+
+
+
+
+
+<div id="jewels">
+<br><br><br><br>
+<div id="card" name = "gold necklace">
+  <img src="gold plated.png" style ="width:30%" class="magi">
+  <h1>Gold Necklace Set For Women</h1>
+  <p id="price"><font color="green">&#x20b9; 90,000</font></p>
+  <p>This Sukkhi Graceful Gold  Necklace Set For Women is made of Alloy. Women love jewellery; specially traditional jewellery adore a women. They wear it on different occasion. They have special importance on ring ceremony, wedding and festive time. They can also wear it on regular basics. Make your moment memorable with this range. This jewel set features a unique one of a kind traditional embellish with antic finish.</p>
+ <p><button><div id="card button" onClick="pay(90000)">Buy</div></button></p> 
+ <p><button><div id="card button" onClick="addcart('Gold Necklace',90000)">Add to Cart(&#x20b9;90,000)</div></button></p></div>
+
+
+
+  
+<div id="card" name="necklace">
+  <img src="alloy.png" style ="width:30%" class="magi">
+  <h1>Indian jewellery</h1>
+  <p id="price"><s>&#x20b9;40,000</s> <font color="green">&#x20b9;30,000</font></p>
+  <p>The Indian jewellery speak of traditional and the rich history or the culture Indian jewellery compliment the garments. You are wearing every way its make you beautiful.</p>
+   <p><button><div id="card button" onClick="pay(30000)">Buy</div></button></p> 
+  <p><button><div id="card button" onClick="addcart('Indian Alloy Jewellery',30000)">Add to Cart(&#x20b9;30000)</div></button></p>
+</div>
+
+
+<a id="pendant"></a>
+<div id="card" name="pendant">
+<img src="pendant.png" style ="width:30%" class="magi">
+  <h1>Zeneme Pendant</h1>
+  <p id="price"><s>&#x20b9;1,35,000</s> <font color="green">&#x20b9;1,20,000</font></p>
+  <p>Zeneme welcomes you to the world of designer jewellery. It was modest beginning a decade ago.In an endeavour to delightfully surprise its customers, travels around the country to procure exquisite and rare pieces of ornamentation. At Zeneme, you will be amazed with the wide range of products in kundan jewellery, polki jewellery, American diamond/Cubic Zirconia Jewellery, and other jewellery accessories. All our products are based in silver and weigh light on your skin.Whatever be the occassion, Zeneme will never fail to meet your expectations.At Zeneme, it is not about ornaments, but a treasure that will be cherished forever.Come, be a part of the Zeneme family and experience a relation of trust, a promise of quality and a tradition of happiness.</p>
+   <p><button><div id="card button" onClick="pay(120000)">Buy</div></button></p> 
+  <p><button><div id="card button" onClick="addcart('Zeneme Pendant',120000)">Add to Cart(&#x20b9;1,20,000)</div></button></p></div>
+</div>
+</div>
+
+
+<br><br><br><br><br><br><br><br>
+<div id="ReachUs">
+<br><br><br><br><br><br><br><br>
+<div id="elecintro"><center><br><br><br>
+<font size="7vh" color="white"><b>Reach Us.</b></font>
+<br><br>
+<font size="5vh" color="white"><b>We offer 24*7 Support.</b></font><br><br>
+<font size="4vh" color="white">You can contact us by <font color="white" size="5vh">ANY MEANS which you find comfortable.</font></font>
+</center>
+</div>
+
+
+
+
+
+<br><br><br><br>
+<center>
+<h1 style="background-color: rgba(0, 0, 0, 0.7); height:7vh;box-shadow: 1px 1px 16px 2px red;color:white;">Contact Information</h1>
+
+<div style="background-color: rgba(0, 0, 0, 0.7); height:45vh;box-shadow: 1px 1px 16px 2px red;color:white;">
+
+<br>
+<h1><b>Whatsapp us</h1></b>
+        <h3 style="color:red;">+91 1213456789</h3><br><br>
+
+<h1><b>Mail us</b></h1>
+       <h3 style="color:red;"> quidpro@gmail.com</h3>
+</div>
+</center>
+
+
+</div>
+
+
+
+
+<br><br><br><br><br><br><br><br>
+<div id="payall">
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<div id="card">
+  <h1>Redeem a Coupon</h1><br><br>
+  <input id="redeemcode" type="text" size="20" maxlength="5" placeholder="Enter the code."><br><br>
+   <p><button><div id="card button" onClick="redeem()">Redeem</div></button></p> 
+Terms and Conditions Apply.
+</div>
+
+<br><br><br>
+<center><input id="address" type="text" size="20" maxlength="150" placeholder="Address....."></center>
+<br><br><br><br><br><br><br>
+<div id="card">
+  <h1>Cash on Delivery</h1>
+  <div id="finalprice"><font color="green"><h1>&#x20b9;0</h1></font></div>
+  <p>Follow the traditional method and pay ready cash on delivery . Your product will be delivered to you within 4 days from the date of booking . You will be notified by message.</p>
+   <p><button><div id="card button" onClick="cod()">Confirm</div></button></p> 
+</div>
+
+<br><br><br>
+<div id="card">
+  <h1>PayTM Karo</h1>
+  <div id="finalprice1"><font color="green"><h1>&#x20b9;0</h1></font></div>
+  <p>Transfer the money via PayTm in the name of <font color="red"><h3>"QUID PRO QUO".</h3></font><br> Your product will be delivered to you within 4 days from the date of booking . You will be notified by message.</p>
+   <p><button><div id="card button" onClick="cod()">Confirm</div></button></p> 
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<div id="apDiv2">
+  <font color="#35e8ff">Username:<input id="us" name="User" type="text" size="10" maxlength="10"><br>
+Password:<input id="pa" name="Pass" type="password" size="10" maxlength="10"><br>
+</font>
+<button onClick="called()" id="log">Log in</button>
+<br><br>
+<font color="#35e8ff">Dont have an account? </font>
+<br><br>
+<font color="#35e8ff"size=6>Create one:</font>
+
+<br><br>
+<font color="#35e8ff">Username:<input id="us" name="User1" type="text" size="10" maxlength="10"><br>
+Password:<input id="pa" name="Pass1" type="password" size="10" maxlength="10"><br>
+
+Confirm Password:<input id="pa" name="Pass11" type="password" size="10" maxlength="10"><br>
+
+Phone number:<input id="pa" name="PH" type="number" size="10" maxlength="10"><br>
+
+
+<button onClick="called1()" id="log">Create Account</button>
+</font></div>
+
+<div id="demo"></div>
+
+<div id="cart" onMouseOver="showcart()">Cart(0)</div>
+<div id="cartdisp" onMouseOver="showcart()"><br>
+<div id="checko" onClick="pay()">Checkout</div>
+<br>
+<div id="totalprice">Total: &#x20b9;0</div>
+<br>
+<div id="noitems">No. of items: 0</div>
+</div>
+
+
+
+<div id="filter">
+<center>
+<div id="sidef">FIND</div>
+<input id="search" name="Search" type="text" size="20" maxlength="15" placeholder="Search...">
+<button type="submit" id="go" onClick="searchh()">.</button><br><br>
+
+<a href="#electronics"><button id="catg">Electronics</button></a><br><br>
+<a href="#apparels"><button id="catg">Apparels</button></a><br><br>
+<a href="#jewels"><button id="catg">Jewellery</button></a><br><br>
+<a href="#offers"><button id="catg">Offers</button></a><br><br>
+
+</center>
+</div>
+
+
+<div id="INOUT">
+<button id="sign" onClick="show(); setTimeout(gob,20000);">Sign In</button>
+<button id="out" onClick="gof()">Log out</button>
+</div>
+
+
+
+<div id="sitemap">
+<a href="#cont"><button id="b1"><span>Home</span></button></a>
+<a href="#offers"><button id="b2"><span>Offers</span></button></a>
+<a href="#electronics"><button id="b3"><span>Tech</span></button></a>
+<a href="#apparels"><button id="b4"><span>Apparels</span></button></a>
+<a href="#ReachUs"><button id="b5"><span>ReachUs</span></button></a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
