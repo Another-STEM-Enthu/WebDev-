@@ -1,0 +1,185 @@
+<html>
+<head>
+<title>
+Final1
+</title>
+
+<style>
+
+#container {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    background-image:url(hr.jpg);  
+    border-radius: 9%;
+    transition: 0.9s ease;
+    box-shadow: 5px 5px 5px #AF7AC5;
+    border-radius: 8%;
+}
+
+#clickk{
+	background-image:url(buttonn11.jpg);
+	transition: 0.9s ease;
+	position:absolute;
+   	top:10;
+        left:620;
+	opacity:0.6;
+	width:112;
+	height:28;
+
+}
+
+#link1{
+  	transition: 1.3s ease;
+  	background: rgba(0,0,0,0.5);
+    	border-radius: 0%;
+	position:absolute;
+   	top:680;
+        left:210;
+	opacity:0;
+	width:945;
+	height:195;
+	box-shadow: -4px 6px 16px 3px #c55151;
+}
+
+
+
+#ccc{
+	position:absolute;
+   	top:420;
+        right:1125;
+	opacity:0;
+	width:112;
+	height:45;
+	background-color: red;
+	border-color:red;
+	transition: 0.9s ease;
+	border-radius: 9%;
+	cursor:hand;
+}
+
+#ddd{
+	position:absolute;
+   	top:420;
+        right:1235;
+	opacity:0;
+	width:112;
+	height:45;
+	background-color: red;
+	border-color:red;
+	transition: 0.9s ease;
+	border-radius: 9%;
+	cursor:hand;
+
+}
+
+#Homee{
+	position:absolute;
+   	top:420;
+        left:620;
+	opacity:0;
+	width:112;
+	height:45;
+	background-color: red;
+	border-color:red;
+	transition: 0.9s ease;
+	border-radius: 9%;
+	cursor:hand;
+}
+
+#aaa{
+	position:absolute;
+   	top:420;
+        right:0;
+	opacity:0;
+	width:112;
+	height:45;
+	background-color: red;
+	border-color:red;
+	transition: 0.9s ease;
+	border-radius: 9%;
+	cursor:hand;
+}
+
+#bbb{
+	position:absolute;
+   	top:420;
+        right:100;
+	opacity:0;
+	width:112;
+	height:45;
+	background-color: red;
+	border-color:red;
+	transition: 0.9s ease;
+	border-radius: 9%;
+	cursor:hand;
+}
+
+</style>
+
+
+
+<script>
+function slidein(){
+	document.getElementById("clickk").style.top="600";
+	document.getElementById("clickk").style.opacity="0";
+	document.getElementById("link1").style.top="290";
+	document.getElementById("container").style.opacity="0.3";
+	document.getElementById("link1").style.opacity="1.0";
+}
+
+
+
+function come(){
+	document.getElementById("aaa").style.opacity="1";
+	document.getElementById("aaa").style.right="510";
+	document.getElementById("ddd").style.opacity="1";
+	document.getElementById("ddd").style.right="760";
+	
+}
+
+
+function comee(){
+	document.getElementById("bbb").style.opacity="1";
+	document.getElementById("bbb").style.right="385";
+	document.getElementById("ccc").style.opacity="1";
+	document.getElementById("ccc").style.right="890";
+}
+
+function home(){
+	document.getElementById("Homee").style.opacity="1.0";
+}
+
+
+
+</script>
+
+
+</head>
+
+
+<body>
+
+
+
+<center>
+<div id="container">
+</div>
+
+
+<div id="clickk" onclick="slidein();setTimeout(come,1500); setTimeout(comee,1700); setTimeout(home,2700); "></div>
+
+<div id="link1"><font color="yellow" size=15>&#9787;</font><br>Welcome to (name of the site).<br><font color="Red" size=6>Which page would you like to Proceed to?</font></div>
+
+
+
+<button id="Homee"  onclick="location.href='Final1.html';">Home</button>
+<button id="aaa">Book a Rental Car</button>
+<button id="bbb">Bookk</button>
+<button id="ccc">Book a book</button>
+<button id="ddd">Pre-order electronics</button>
+</center>
+
+
+</body>
+</html>

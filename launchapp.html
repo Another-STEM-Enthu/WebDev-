@@ -1,0 +1,333 @@
+
+<html><head><title>Launchapp</title>
+<style>
+
+
+  .circle {
+	border-radius: 50%;
+	display: inline-block;
+	margin-right: 20px;
+}
+
+#v{
+	background-color: #7bc57a;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	transition: 1.7s ease;
+	position:absolute;
+   	top:600;
+        left:-5;
+	opacity:0;
+}
+
+#v1{
+	background-color: #7bc57a;
+	padding: 10px 10px;
+	float: left;
+	border-radius: 20%;
+	transition: 0.9s ease;
+	position:absolute;
+   	top:10;
+        left:-10;
+	opacity:0;
+}
+
+
+
+
+
+#v2{
+
+	padding: 1px 1px;
+       
+	border-radius: 5%;
+	transition: 2.5s ease;
+	position:absolute;
+   	
+	height:50;
+	width:50;
+	opacity:0;
+
+}
+
+#v11{
+	background-color: #7bc57a;
+	padding: 10px 10px;
+	float: left;
+	border-radius: 20%;
+	transition: 0.9s ease;
+	position:absolute;
+   	top:10;
+        left:-100;
+	opacity:0;
+}
+
+#v111{
+	background-color: #7bc57a;
+	padding: 10px 10px;
+	float: left;
+	border-radius: 20%;
+	transition: 0.9s ease;
+	position:absolute;
+   	top:90;
+        left:-10;
+	opacity:0;
+}
+
+#v1111{
+	background-color: #7bc57a;
+	padding: 10px 10px;
+	float: left;
+	border-radius: 20%;
+	transition: 0.9s ease;
+	position:absolute;
+   	top:90;
+        left:-100;
+	opacity:0;
+}
+
+
+
+#close{
+	background-color: red;
+	padding: 10px 650px;
+	border-radius: 10%;
+	transition: 0.9s ease;
+	position:absolute;
+   	top:-250;
+        left:10;
+	opacity:0;
+}
+
+
+
+#sitem{
+	background-color: black;
+	padding: 20px 30px;
+	float: left;
+	border-radius: 5%;
+	transition: 1.7s ease;
+	position:relative;
+   	top:10;
+        left:-10;
+}
+
+#sitem:hover{
+	background: rgba(0,0,0,0.3);
+	padding: 70px 70px;
+	float: left;
+	border-radius: 5%;
+	transition: 0.7s ease;
+	position:relative;
+   	top:10;
+        left:-10;
+	cursor: hand;
+
+}
+
+#sitem:hover > #v1{
+	background-color: #7bc57a;
+	padding: 20px 25px;
+	border-radius: 20%;
+	transition: 1.7s ease;
+	position:absolute;
+   	top:10;
+        left:100;
+	opacity:1.0;
+	}
+
+#sitem:hover > #v11{
+	background-color: #7bc57a;
+	padding: 20px 25px;
+	border-radius: 20%;
+	transition: 1.7s ease;
+	position:absolute;
+   	top:10;
+        left:-5;
+	opacity:1.0;
+}
+
+#sitem:hover > #v111{
+	background-color: #7bc57a;
+	padding: 20px 25px;
+	border-radius: 20%;
+	transition: 1.7s ease;
+	position:absolute;
+   	top:90;
+        left:95;
+	opacity:1.0;
+}
+
+#sitem:hover > #v1111{
+	background-color: #7bc57a;
+	padding: 20px 25px;
+	border-radius: 20%;
+	transition: 1.7s ease;
+	position:absolute;
+   	top:90;
+        left:-5;
+	opacity:1.0;
+}
+
+
+.content{
+	background-color: #7bc57a;
+   	top:700;
+        left:50;
+	opacity:1.0;
+}
+
+
+
+
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.fadein {
+  animation: fadeIn 2.5s ease forwards;
+}
+
+
+
+
+
+
+
+
+</style>
+
+<script>
+var pass=false;
+function launchv1(){
+	document.getElementById("v").style.top="10";
+        document.getElementById("v").style.left="600";
+	document.getElementById("v").style.height="70";
+	document.getElementById("v").style.width="70";
+	document.getElementById("v").style.opacity="1.0";
+	document.getElementById("v").style.transition="1.2s ease";
+	document.getElementById("sitem").style.opacity="0.0";	
+	document.getElementById("sitem").style.top="-350";
+	document.getElementById("sitem").style.left="-10";	
+
+
+}
+
+
+function launchv2(){
+	document.getElementById("v2").style.opacity="1";
+	document.getElementById("v2").style.width="1330";
+	document.getElementById("v2").style.height="655";
+	document.getElementById("v2").style.position="relative";
+	document.getElementById("v2").style.transition="1.2s ease";
+	pass=true;
+	document.getElementById("close").style.opacity="1";
+	document.getElementById("close").style.top="25";
+
+}
+
+
+function launchv3(){
+	document.getElementById("v").style.height="130";
+	document.getElementById("v").style.width="130";
+
+}
+
+function launchv4(){
+	document.getElementById("v").style.height="70";
+	document.getElementById("v").style.width="70";
+	document.getElementById("v").style.transition="1.2s ease";
+}
+
+function launchv4(){
+	document.getElementById("v").style.top="-1000";
+	document.getElementById("v").style.left="600";
+	document.getElementById("v").style.height="70";
+	document.getElementById("v").style.width="70";
+
+	
+}
+
+
+function close1(){
+
+
+	if(pass==true){
+	document.getElementById("close").style.top="1000";
+	document.getElementById("close").style.opacity="0";
+	document.getElementById("close").style.padding="20px 20px";
+	document.getElementById("close").style.cursor="hand";
+	
+	document.getElementById("v2").style.top="600";
+	document.getElementById("v2").style.opacity="0";
+	document.getElementById("v2").style.height="100";
+	document.getElementById("v2").style.width="100";
+
+	document.getElementById("sitem").style.left="-10";
+	document.getElementById("sitem").style.top="10";
+	document.getElementById("sitem").style.opacity="1";
+}
+pass=false;
+	
+
+
+	document.getElementById("v").style.top="600";
+	document.getElementById("v").style.left="-5";
+	document.getElementById("v").style.opacity="0.0";
+
+	document.getElementById("v2").style.height="50";
+	document.getElementById("v2").style.width="50";
+	document.getElementById("v2").style.top="10";
+	
+
+	document.getElementById("close").style.top="-250";
+	document.getElementById("close").style.left="10";
+	document.getElementById("close").style.padding="10px 650px";
+	
+
+}
+
+
+</script>
+
+</head>
+<body background="hr.jpg">
+<div class="fadein">
+
+
+<div id="sitem"><font color="white">Site Map</font>
+<div id="v11" onclick="launchv1(); setTimeout(launchv2,2300); setTimeout(launchv3,1600); setTimeout(launchv4,1800); setTimeout(launchv5,2200)">Page 1</div>
+<div id="v1" onclick="launchv1(); setTimeout(launchv2,2300); setTimeout(launchv3,1600); setTimeout(launchv4,1800); setTimeout(launchv5,2200)">Home</div>
+<div id="v111" onclick="launchv1(); setTimeout(launchv2,2300); setTimeout(launchv3,1600); setTimeout(launchv4,1800); setTimeout(launchv5,2200)">Page 2</div>
+<div id="v1111" onclick="launchv1(); setTimeout(launchv2,2300); setTimeout(launchv3,1600); setTimeout(launchv4,1800); setTimeout(launchv5,2200)">Page 3</div>
+</div>
+<div id="v"> </div>
+
+
+
+<div id="close" onclick="close1()"><font color="white">Close</font></div>
+
+<center>
+<iframe id="v2" src="final.html">
+</center>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>
