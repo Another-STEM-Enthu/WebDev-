@@ -1,0 +1,153 @@
+<html><head>
+<title>YOUR SITE.COM</title>
+
+
+<style>
+
+
+
+
+
+#card1 {
+  background:white;
+  border-radius:2%;
+  transition:0.5s ease;
+  width: 40vw;
+  length: 30vh;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  position:absolute;
+  left:4vw;
+    box-shadow: 1px 1px 16px 5px red;
+}
+
+
+#card2 {
+  background:white;
+  border-radius:2%;
+  transition:0.5s ease;
+  width: 50vw;
+  height: 85vh;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  position:absolute;
+  left:48vw;
+      box-shadow: 1px 1px 16px 5px red;
+}
+
+
+
+
+#buttonn {
+  border: none;
+  outline: 0;
+  width:40vw;
+  height:3vw;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+#cancel{
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 2.2vh 4vh;
+    text-decoration: none;
+    cursor: hand;
+    border-radius: 0.45vh;
+    transition: 1s ease;
+    border: 0.15vh solid red;
+    position:absolute;
+    top:2vh;
+    right:5vw;
+    opacity:0.5;
+}
+#cancel:hover{
+    opacity:1;
+    background-color:red;
+}
+
+
+body
+{
+	font-size:      20%.; 
+	padding:         0;
+	background-color:white;
+	font-family:  arial
+}
+
+#magi1{
+	transition: transform .2s;
+	width:30%;
+}
+
+#card1:hover {
+	transform: scale(1.05);
+
+}
+
+#card2:hover {
+	transform: scale(1.05);
+
+}
+
+#address{
+    width: 35vw;
+	height: 9vh;
+    padding: 1.65vh 1vh;
+    box-sizing: border-box;
+    border: 0.25vh solid red;
+    transition: 0.9s ease;
+    border-radius: 1vh;
+}
+#address:hover {
+	transform: scale(1.1);}
+
+#payall{
+	overflow:scroll;
+	background:white;
+}
+</style>
+</head>
+<body>
+
+<div id="payall">
+<center>
+ <input type="text" placeholder="Enter your address....." id="address" maxlength="150"></input>
+</center>
+
+
+<br><br><br>
+
+
+<div id="options">
+<div id="card1" name = "cash">
+  <img src="cod.jpg" class="magi1">
+  <h1><i> Cash On  Delivery</i></h1>
+  <p id="price"> Rs 13,900</p>
+  <p><font color = "black" size = "4"  face="Times New Roman">  Follow tthe traditional  method and pay ready cash on delivery . Your product will be delivered to you  within 4 days from the date of booking . You will be notified by message.</font></p>
+ <p><div id="buttonn"><h3>Pay On Delivery</h3></div></p> 
+
+</div>
+
+
+  
+<div id="card2" name="paytm">
+  <img src="paytm.jpg" class="magi1">
+  <h1><i>PayTm Karo !!</i></h1>
+  <p id="price"> Rs 12,600</p>
+  <p><font color = "black" size = "4" face="Times New Roman"> Transfer the money via PayTm to the QR code given to you  on delivery.  Your product will be delivered to you  within 4 days from the date of booking . You will be notified by message. </font></p>
+<p><div id="buttonn"><h3>Confirm</h3></div></p> 
+</div>
+</div>
+
+
+
+<div id="cancel"><h3>Cancel Payment</h3></div></p>
+</div>
